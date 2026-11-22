@@ -1,0 +1,11 @@
+[Unit]
+Description=imu_pi (MPU6050 del chasis -> PRIZM, comando E X)
+
+[Service]
+EnvironmentFile=/home/robot/imu_pi.env
+ExecStart=/home/robot/imu_pi $IMU_ARGS
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target

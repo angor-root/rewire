@@ -1,0 +1,10 @@
+[Unit]
+Description=DSM: control de la pelota (camara + politica RL + IMU), supervisado (arranque.sh)
+
+[Service]
+ExecStart=%h/arranque.sh
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target
